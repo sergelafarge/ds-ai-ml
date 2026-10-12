@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elements | Serge-Eric Keller</title>
+<meta name="description" content="Style guide showing every building block used on the portfolio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap"><b><a href="index.html">Personal Portfolio</a></b>
+<ul><li><a href="index.html#work">Work</a></li><li><a href="index.html#background">Background</a></li><li><a href="index.html#contact">Contact</a></li></ul></div></nav>
+
+<header class="hero sub"><div class="wrap"><div>
+<p class="crumb"><a href="index.html">Home</a> / Elements</p>
+<h1>Elements</h1>
+<p>A reference for the building blocks used across this site. Copy any of them into a new page.</p>
+</div></div></header>
+
+<main class="wrap">
+<section>
+<h2>Colors</h2>
+<p class="lede">All colors are CSS variables in <code>style.css</code>, with dark mode values built in.</p>
+<div class="swatches">
+<div class="sw"><i style="background:var(--bg)"></i><span>--bg</span></div>
+<div class="sw"><i style="background:var(--surface)"></i><span>--surface</span></div>
+<div class="sw"><i style="background:var(--ink)"></i><span>--ink</span></div>
+<div class="sw"><i style="background:var(--mute)"></i><span>--mute</span></div>
+<div class="sw"><i style="background:var(--accent)"></i><span>--accent</span></div>
+<div class="sw"><i style="background:var(--line)"></i><span>--line</span></div>
+</div>
+</section>
+
+<section>
+<h2>Typography</h2>
+<div class="stack prose">
+<h1 style="font-size:2.4rem">Heading 1</h1>
+<h2 style="margin:0">Heading 2</h2>
+<h3>Heading 3</h3>
+<p class="lede" style="margin:0">Lede text is slightly muted and sits under a heading.</p>
+<p>Body text uses IBM Plex Sans. Here is a <a href="#" style="color:var(--accent)">link</a> and some <code>inline code</code>.</p>
+<blockquote>A pull quote uses the serif face and an accent rule.</blockquote>
+<ul><li>Unordered list item</li><li>Another item</li></ul>
+<ol><li>Ordered list item</li><li>Another item</li></ol>
+</div>
+</section>
+
+<section>
+<h2>Buttons and chips</h2>
+<div class="row"><a class="btn p" href="#">Primary</a><a class="btn" href="#">Secondary</a><button class="btn" type="button">Button element</button></div>
+<ul class="chips" style="margin-top:16px"><li>Python</li><li>SQL</li><li>Databricks</li><li>Tableau</li></ul>
+</section>
+
+<section>
+<h2>Notebook cell</h2>
+<div class="cell"><i>In [1]:</i> portfolio.load("name")<br><span class="o"><i>Out[1]:</i> Data Science, ML and AI</span></div>
+</section>
+
+<section>
+<h2>Case study card</h2>
+<div class="case">
+<div><h3>Card title</h3><p style="color:var(--mute)">Short context line.</p></div>
+<dl>
+<div><dt>Pain point</dt><dd>What was going wrong.</dd></div>
+<div><dt>What I built</dt><dd>The solution in one sentence.</dd></div>
+<div><dt>Result</dt><dd>The outcome, with a number if you have one.</dd></div>
+</dl>
+</div>
+</section>
+
+<section>
+<h2>Timeline</h2>
+<ol class="tl">
+<li><time>2024 to 2026</time><h3>Role title, Company</h3><p>One line on what you did.</p></li>
+<li><time>2021 to 2024</time><h3>Previous role, Company</h3><p>One line on what you did.</p></li>
+</ol>
+</section>
+
+<section>
+<h2>Table</h2>
+<div class="tbl"><table>
+<thead><tr><th>Tool</th><th>Used for</th><th>Level</th></tr></thead>
+<tbody><tr><td>Python</td><td>Modeling and automation</td><td>Daily</td></tr><tr><td>SQL</td><td>Data extraction</td><td>Daily</td></tr><tr><td>Tableau</td><td>Dashboards</td><td>Regular</td></tr></tbody>
+</table></div>
+</section>
+
+<section>
+<h2>Code</h2>
+<pre><code>SELECT region, SUM(sales) AS total
+FROM sales
+GROUP BY region;</code></pre>
+</section>
+
+<section>
+<h2>Form</h2>
+<form onsubmit="return false">
+<div class="field"><label for="n">Name</label><input id="n" type="text" placeholder="Your name"></div>
+<div class="field"><label for="e">Email</label><input id="e" type="email" placeholder="you@example.com"></div>
+<div class="field"><label for="t">Topic</label><select id="t"><option>Data project</option><option>AI project</option><option>Other</option></select></div>
+<div class="field"><label for="m">Message</label><textarea id="m" placeholder="How can I help?"></textarea></div>
+<div class="field check"><input id="c" type="checkbox"><label for="c" style="margin:0;font-weight:400">Send me a copy</label></div>
+<button class="btn p" type="submit">Send (demo only)</button>
+</form>
+<p class="lede" style="margin-top:14px">This form is a style demo and does not send anything. To receive messages, connect it to a form service.</p>
+</section>
+</main>
+
+<footer><div class="wrap">&copy; <span id="yr"></span> Keller Insight LLC</div></footer>
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+</body>
+</html>

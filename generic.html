@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page title | Serge-Eric Keller</title>
+<meta name="description" content="A generic content page template for the portfolio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="wrap"><b><a href="index.html">Personal Portfolio</a></b>
+<ul><li><a href="index.html#work">Work</a></li><li><a href="index.html#background">Background</a></li><li><a href="index.html#contact">Contact</a></li></ul></div></nav>
+
+<header class="hero sub"><div class="wrap"><div>
+<p class="crumb"><a href="index.html">Home</a> / Page title</p>
+<h1>Page title</h1>
+<p>One or two sentences that say what this page is about and who it is for.</p>
+</div></div></header>
+
+<main class="wrap">
+<section>
+<article class="prose">
+<h2>Context</h2>
+<p>Describe the problem or topic. Keep paragraphs short and lead with the point that matters most to the reader.</p>
+<figure class="figure"><div class="ph">Image or chart goes here</div><figcaption>Caption that says what the reader is looking at.</figcaption></figure>
+
+<h2>Approach</h2>
+<p>Explain what you did and why. Use a list when steps happen in order:</p>
+<ol><li>Collect and clean the data.</li><li>Explore patterns and test hypotheses.</li><li>Build and evaluate a model.</li></ol>
+<h3>A smaller heading</h3>
+<p>Use smaller headings to break up longer sections. Link to a <a href="index.html#work" style="color:var(--accent)">project on the home page</a> or to a notebook on GitHub.</p>
+<pre><code>import pandas as pd
+df = pd.read_csv("data.csv")
+df.describe()</code></pre>
+<blockquote>A short pull quote or key takeaway that you want readers to remember.</blockquote>
+
+<h2>Results</h2>
+<div class="tbl"><table>
+<thead><tr><th>Metric</th><th>Before</th><th>After</th></tr></thead>
+<tbody><tr><td>Example metric A</td><td>0</td><td>0</td></tr><tr><td>Example metric B</td><td>0</td><td>0</td></tr></tbody>
+</table></div>
+<p>Summarize the outcome and what you would do next.</p>
+<p class="row"><a class="btn p" href="index.html#contact">Get in touch</a> <a class="btn" href="index.html#work">Back to projects</a></p>
+</article>
+</section>
+</main>
+
+<footer><div class="wrap">&copy; <span id="yr"></span> Keller Insight LLC</div></footer>
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+</body>
+</html>
